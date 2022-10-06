@@ -33,6 +33,9 @@ namespace GoogleMapsTask.Browsers
 			}
 		}
 
+		/// <summary>
+		/// Parses browser list from config if exists, otherwise defaults to chrome.
+		/// </summary>
 		private static void ParseBrowsers()
 		{
 			string configFullFilepath = Environment.CurrentDirectory + _browsersConfigFileRelativeFilepath;

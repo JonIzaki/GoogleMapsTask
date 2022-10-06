@@ -12,11 +12,20 @@ namespace GoogleMapsTask.Tests
 	public class GoogleMapsAddressSearchTests
 	{
 		private IAddressProvider _validAddressProvider;
-		private readonly double _loadingAddressMaxTime = 4;
+
+		/// <summary>
+		/// Providing long times with our address lookup test as we don't want a tesst to fail on slow connection.
+		/// </summary>
+		private readonly double _loadingAddressMaxTime = 20;
 
 		[OneTimeSetUp]
 		public void SetUpOnce() => _validAddressProvider = new AddressesCollection(StaticAddressDB.ValidAddresses.shortCollection);
 
+		/// <summary>
+		/// An example for a test searching for all addresses in the given DB.
+		/// This test is defined with the multi browser feature using browser type attribute.
+		/// </summary>
+		/// <param name="browser"> The browser type to run the test on </param>
 		[Test]
 		public void ConsecutiveValidAddressSearchExample([ConfigFileBrowsers] BrowserType browser)
 		{
@@ -36,6 +45,9 @@ namespace GoogleMapsTask.Tests
 			Assert.That(allAdressesFound, Is.True);
 		}
 
+		/// <summary>
+		/// Single address search test which doesn't use the multi browser feature.
+		/// </summary>
 		[Test]
 		public void OneAddressSearchExample()
 		{

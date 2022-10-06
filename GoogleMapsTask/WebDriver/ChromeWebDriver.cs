@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using WebDriverManager.DriverConfigs.Impl;
 using WebDriverManager;
+using WebDriverManager.Helpers;
 
 namespace GoogleMapsTask.WebDriver
 {
@@ -25,7 +26,7 @@ namespace GoogleMapsTask.WebDriver
 		/// </summary>
 		private static void SetupChromeDrivers()
 		{
-			new DriverManager().SetUpDriver(new ChromeConfig());
+			new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
 
 			_didSetupChromeDrivers = true;
 		}
