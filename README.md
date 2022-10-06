@@ -1,7 +1,7 @@
 # GoogleMapsTask
 
 This small project provides implementation for Google Maps UI test strategy focusing on address lookups.
-This project uses **Selenium WebDrive** and **NUnit** for browser automation.
+This project uses **Selenium WebDrive** and **NUnit** for browser automation and currently supports only Chrome browser.
 
 ### Dependencies:
 Dotnet 6.0 (https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
