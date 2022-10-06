@@ -49,7 +49,7 @@ namespace GoogleMapsTask.Browsers
 				Debug.WriteLine("Failed to read the browsers config file at " + configFullFilepath +
 									".\n Exception thrown:\n" + e.Message);
 
-				_browsers = new List<BrowserType>();
+				_browsers = new List<BrowserType>() { BrowserType.Chrome };
 			}
 		}
 	}

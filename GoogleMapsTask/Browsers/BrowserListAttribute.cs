@@ -6,7 +6,7 @@
 	/// </summary>
 	public class ConfigFileBrowsers : ValueSourceAttribute
 	{
-		private static List<BrowserType> _browsers = new();// { BrowserType.Firefox };
+		private static List<BrowserType> _browsers = new();
 
 		private static bool InitializedOnce = false;
 
